@@ -1,109 +1,601 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>mburu karanja's Personal Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Mburu Karanja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="kdLcdk31yXWRZkBLdJTRv.jpg" type="image/jpg">
+    <style>
+        /* Custom CSS for animations and transitions */
+        .floating { 
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0,  0px); }
+            50%  { transform: translate(0, 15px); }
+            100%   { transform: translate(0, -0px); }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        #navbar {
+            transition: all 0.3s ease;
+        }
+        
+        .progress-bar {
+            transition: width 1.5s ease-in-out;
+        }
+        
+        .section {
+            scroll-margin-top: 100px;
+        }
+    </style>
 </head>
-</head>
-<body>
-	<header>
-		<h1>Hello, I'm [Mburu Karanja]</h1>
-		<p>Welcome to my personal website!</p>
-	</header>
-	<nav>
-		<ul>
-            <li><a href="#About">About 🗒</a></li>
-			<li><a href="#childhood">Childhood 🌱</a></li>
-			<li><a href="#education">Education 🎓</a></li>
-		    <li><a href="#skills">Skills and Talents 🏆</a></li>
-			<li><a href="#future">Future Aspirations 🔮</a></li>
-			<li><a href="#contact">Contact 🌐</a></li>
-		</ul>
-	</nav>
-	<main>
-     <section id="about">
- <h2>About Me</h2>
- <hr>
- <img src="wa.me.jpg" alt="Profile Picture"  class="profile-pic"> 
-  <p>Hello, my name is [Mburu Karanja] and I am a student pursuing[Information Technlogy].
-   I have [1 Year] of experience in this field and I am passionate about [Security and Technology].
- In my free time, I enjoy [Playing CTFs, Drawing & Cycling].</p> 
-                </section>
-		<section id="childhood">
-			<h2>Childhood Memories</h2>
-            <hr>
-			<p>One of my favorite childhood experiences was when I received my
-                first computer at the age of 14. I was fascinated by the technology 
-                and spent countless hours exploring and learning about different software.
-                This experience sparked my interest in technology and eventually led me to pursue a degree in information technology.
-                As I continued my studies, I became particularly interested in cybersecurity and data protection, 
-                which eventually became my specialization. 
-                This childhood experience has played a significant role in shaping my passion and career path in the field of technology and security.</p>
-		</section>
-		<section id="education">
-			<h2>Education and Achievements</h2>
-            <hr>
-			<p>I am proud of my academic achievements and involvement in extracurricular activities.</p>
-            <h2>Education</h2>
-            <div class="degree"> 
-            <h3>Degree</h3>
-             <h4>Zetech University</h4> 
-              <p>2022-2025</p> 
-               </div> 
-               <br>
-             <div class="degree"> 
-           <h3>Certificate</h3> 
-            <h4>KIBTS</h4>
-             <p>2022</p>
+<body class="bg-gray-50 font-sans antialiased">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full bg-white shadow-md z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold gradient-text">Mburk4</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                    <a href="#resume" class="text-gray-700 hover:text-blue-600 transition">Resume</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 transition">Projects</a>
+                    <a href="#challenges" class="text-gray-700 hover:text-blue-600 transition">Lab Challenges</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
             </div>
-        </section>
-		<section id="skills">
-			<h2>My Skills and Talents</h2>
-            <hr>
-			<p>Aside from my academic pursuits, I also have a variety of skills and hobbies. Check them out!</p>
-		<ul>
-            <li>Experience in coding languages such as Java, Python, or HTML
-               
-      
-        <li>Experience with database management and data analysis
-        </li>
-        <li> Strong problem-solving and critical thinking skills
-        </li>
-        <li>Fluency in multiple languages
-        </li>
-        <li>Artistic talents that showcase my creativity and diverse interests</li>
-    </li>
-  </ul>
-        </section>
-		<section id="future">
-			<h2>Future Goals and Aspirations</h2>
-            <hr>
-			<p>I have big dreams and aspirations for my future. Here's a glimpse into what I hope to achieve.</p>
-            <ul>
-                <li>Obtaining a master's degree in a field of IT</li>
-                   
-          
-            <li>Landing a job at a top technology company
-            </li>
-            <li> Starting my own business in the IT industry
-            </li>
-            <li>Making a positive impact in the world through technology, such as developing solutions for environmental sustainability or social justice issues
-            </li>
-            <li>Continuing to learn and stay updated on the latest advancements and developments in the IT field.</li>
-        </li>
-      </ul>
-        </section>
-		<section id="contact">
-			<h2>Get in Touch</h2>
-            <hr>
-			<p>If you would like to connect with me, feel free to reach out via email or connect on social media.</p>
-			<p>Email: whatofyournumber@gmail.com</p>
-			<p>Discord: mburu_karanja</p>
-			<p>LinkedIn: Mburu Karanja</p>
-		</section>
-	</main>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4 shadow-lg">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                <a href="#resume" class="text-gray-700 hover:text-blue-600 transition">Resume</a>
+                <a href="#projects" class="text-gray-700 hover:text-blue-600 transition">Projects</a>
+                <a href="#challenges" class="text-gray-700 hover:text-blue-600 transition">Lab Challenges</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="section min-h-screen flex items-center pt-16">
+        <div class="max-w-6xl mx-auto px-4 py-12 md:py-24">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">Hi, I'm <span class="gradient-text">Mburu Karanja</span></h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8">Cybersecurity Specialist | Blue Team Junior Analyst | SOC | CTF Player | IT Consultant</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition">
+                            Contact Me
+                        </a>
+                        <a href="#resume" class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg transition">
+                            View Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQFziyqJfzZ80w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1718261907990?e=1754524800&v=beta&t=YYbOo3kdHDaNzD2VkuEraqyxtYhOUa5YFsx_rLuhhaI" alt="Profile Photo" class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-white shadow-xl floating">
+                        <div class="absolute -bottom-2 -right-2 bg-blue-100 p-2 rounded-full">
+                            <div class="bg-blue-600 text-white p-2 rounded-full">
+                                <i class="fas fa-code text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Resume Section -->
+    <section id="resume" class="section py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="gradient-text">Resume</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">I'm a highly detailed recent graduate with BSc Information Technology with a passion for both breaking and building secure computer systems. Demonstrated leadership in organizing cybersecurity workshops, CTFs, and awareness events. Skilled in reverse engineering, steganography, and digital forensics, with active participation in CTF competitions as part of Fr334aks-mini. Eager to apply technical skills and continue growing in a dynamic cybersecurity role.
+</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="py-6 px-8">
+                    <div class="flex justify-between items-center mb-8">
+                        <h3 class="text-2xl font-bold gradient-text">Mburu Karanja</h3>
+                        <a href="./assets/Mburu Karanja_resume.pdf" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition">
+                            <i class="fas fa-download mr-2"></i> Download PDF
+                        </a>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Education -->
+                        <div class="col-span-1">
+                            <h4 class="text-xl font-semibold mb-4 border-b pb-2">Education</h4>
+                            <div class="space-y-6">
+                                <div>
+                                    <h5 class="font-medium text-blue-600">Bachelor of Information Technology</h5>
+                                    <p class="text-gray-600">Zetech University</p>
+                                    <p class="text-sm text-gray-500">2025</p>
+                                </div>
+                                <!--<div>
+                                    <h5 class="font-medium text-blue-600">Security Engineer</h5>
+                                    <p class="text-gray-600">CyberShujaa</p>
+                                    <p class="text-sm text-gray-500">2025</p>
+                                </div>
+                            </div>
+                        </div> -->
+                        
+                        <!-- Experience -->
+                        <div class="col-span-1">
+                            <h4 class="text-xl font-semibold mb-4 border-b pb-2">Experience</h4>
+                            <div class="space-y-6">
+                                <div>
+                                    <h5 class="font-medium text-blue-600">Founder & Community Lead</h5>
+                                    <p class="text-gray-600">Cyber Chief Circle</p>
+                                    <p class="text-sm text-gray-500"><em>Feb 2025 - present</em></p>
+                                    <ul class="mt-2 text-gray-700 list-disc list-inside">
+                                        <li>Founded a cybersecurity community connecting students across Kenyan campuses.</li>
+                                        <li>Hosted inter-campus workshops, CTFs, and beginner-friendly meetups.</li>
+                                        <li>Built a multi-campus presence in 3 months with early engagement.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h5 class="font-medium text-blue-600">Cybersecurity Student Lead & GDG Cybersecurity Lead</h5>
+                                    <p class="text-gray-600">Zetech University, Ruiru</p>
+                                    <p class="text-sm text-gray-500"><em>Apr 2024 – Present</em></p>
+                                    <ul class="mt-2 text-gray-700 list-disc list-inside">
+                                        <li>Led weekly cybersecurity learning sessions simulating CTF challenges for all levels.</li>
+                                        <li>Organized a CTF competition with 130 participants across multiple categories.</li>
+                                        <li>Hosted 2 Hack Nights with 80-150 participants, promoting team-based learning.</li>
+                                        <li>Developed training resources and facilitated workshops, growing the GDGoC community by 42%.</li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <!-- Skills -->
+                        <div class="col-span-1">
+                            <h4 class="text-xl font-semibold mb-4 border-b pb-2">Skills</h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <p class="text-gray-700 mb-1">Programming</p>
+                                    <div class="w-full bg-gray-200 h-2 rounded-full">
+                                        <div class="progress-bar bg-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-gray-700 mb-1">Cybersecurity</p>
+                                    <div class="w-full bg-gray-200 h-2 rounded-full">
+                                        <div class="progress-bar bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-gray-700 mb-1">Networking</p>
+                                    <div class="w-full bg-gray-200 h-2 rounded-full">
+                                        <div class="progress-bar bg-blue-600 h-2 rounded-full" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-gray-700 mb-1">Problem Solving</p>
+                                    <div class="w-full bg-gray-200 h-2 rounded-full">
+                                        <div class="progress-bar bg-blue-600 h-2 rounded-full" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h4 class="text-xl font-semibold mt-8 mb-4 border-b pb-2">Certifications</h4>
+<div class="space-y-3">
+    <div class="flex items-start">
+        <div class="text-blue-600 mr-3 mt-1">
+            <i class="fas fa-certificate"></i>
+        </div>
+        <div>
+            <p class="font-medium">Certified Ethical Hacker</p>
+            <p class="text-sm text-gray-600">Cisco Academy</p>
+        </div>
+    </div>
+    <div class="flex items-start">
+        <div class="text-blue-600 mr-3 mt-1">
+            <i class="fas fa-certificate"></i>
+        </div>
+        <div>
+            <p class="font-medium">Blue Team Junior Analyst</p>
+            <p class="text-sm text-gray-600">Security Blue Team</p>
+        </div>
+    </div>
+    <div class="flex items-start">
+        <div class="text-blue-600 mr-3 mt-1">
+            <i class="fas fa-certificate"></i>
+        </div>
+        <div>
+            <p class="font-medium">Cybersecurity Fundamentals</p>
+            <p class="text-sm text-gray-600">IBM</p>
+        </div>
+    </div>
+    <div class="flex items-start">
+        <div class="text-blue-600 mr-3 mt-1">
+            <i class="fas fa-certificate"></i>
+        </div>
+        <div>
+            <p class="font-medium">Cyber Threat Management</p>
+            <p class="text-sm text-gray-600">Cisco Academy</p>
+        </div>
+    </div>
+    <div class="flex items-start">
+        <div class="text-blue-600 mr-3 mt-1">
+            <i class="fas fa-certificate"></i>
+        </div>
+        <div>
+            <p class="font-medium">SC-900</p>
+            <p class="text-sm text-gray-600">Microsoft</p>
+        </div>
+    </div>
+    <div class="flex items-start">
+        <div class="text-blue-600 mr-3 mt-1">
+            <i class="fas fa-certificate"></i>
+        </div>
+        <div>
+            <p class="font-medium">Student SOC Program Foundations</p>
+            <p class="text-sm text-gray-600">Microsoft</p>
+        </div>
+    </div>
+</div>
+                           
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="section py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Some of my recent work that demonstrates my skills and capabilities</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="https://wazuh.com/wp-content/themes/wazuh-v3/assets/images/home/siem-dashboard.png" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Scalable SIEM Architecture</h3>
+                        <p class="text-gray-600 mb-4">Designed and implemented a scalable SIEM solution using Wazuh, AWS, and Elasticsearch to enable real-time threat detection, log analysis, and cloud infrastructure monitoring. Focused on improving visibility, automating alerting, and enhancing incident response across cloud-based environments.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">AWS</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Wazuh</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Elasticsearch</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="https://systemssolutions.com/wp-content/uploads/2023/12/Cracking-the-Code-to-Team-Security-Expert-Tips-for-Introducing-Two-Factor-Authentication-with-Ease.webp" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Two-Factor Authentication System (Flask + SQLite)</h3>
+                        <p class="text-gray-600 mb-4">Developed a secure 2FA system using Flask, SQLite, bcrypt, and PyOTP. Users scan a QR code to enable TOTP-based verification with authenticator apps(Google Authenticator). Passwords are securely hashed, and 2FA is required to complete the login process.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Flask</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">SQLite</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/Mburu-karanja/Cyb3r-Syst3ms" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <i class="fab fa-github mr-2"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <img src="https://neilpatel.com/wp-content/uploads/2015/04/ecommerce.jpg" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Website</h3>
+                        <p class="text-gray-600 mb-4">Built a fully functional e-commerce platform with React and Firebase, implementing features like user authentication.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">React</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Firebase</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/Mburu-karanja/the-ebag-mart" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <i class="fab fa-github mr-2"></i> Code
+                            </a>
+                            <a href="https://the-ebag-mart.vercel.app/" class="text-blue-600 hover:text-blue-800 flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> Live Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://github.com/Mburu-karanja/" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                    View More Projects
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Lab Challenges Section -->
+    <section id="challenges" class="section py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">CTF<span class="gradient-text"> LABS WRITE-UPs</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Documentation of CTF challenges and security research</p>
+            </div>
+            <div class="text-center mt-12">
+                <a href="https://mburukaranja.me" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                    View Write-Ups on My Blog
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="section py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Feel free to reach out for collaborations or just a friendly hello</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition w-full">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white rounded-xl shadow-lg p-8 h-full">
+                        <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-700">Email</h4>
+                                    <a href="mailto:whatofyournumber@gmail.com" class="text-gray-600 hover:text-blue-600 transition">send me a mail</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fab fa-linkedin text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-700">LinkedIn</h4>
+                                    <a href="https://linkedin.com/in/mburukaranja" target="_blank" class="text-gray-600 hover:text-blue-600 transition">linkedin.com/in/mburukaranja</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fab fa-github text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-700">GitHub</h4>
+                                    <a href="https://github.com/Mburu-karanja" target="_blank" class="text-gray-600 hover:text-blue-600 transition">github.com/Mburu-karanja</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <!--<div>
+                                    <h4 class="font-medium text-gray-700">Phone</h4>
+                                    <a href="tel:+1234567890" class="text-gray-600 hover:text-blue-600 transition">+254 234 567-890</a>
+                                </div>-->
+                            </div>
+                            
+                            <div class="pt-6">
+                                <h4 class="font-medium text-gray-700 mb-4">Connect with me</h4>
+                                <div class="flex space-x-4">
+                                    <a href="https://x.com/mburu_karanja_" class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="https://linkedin.com/in/mburukaranja" class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="https://github.com/Mburu-karanja" class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-600 hover:text-white transition">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold gradient-text">Mburu Karanja</a>
+                    <p class="mt-2 text-gray-400"></p>
+                </div>
+                
+                <div class="flex flex-wrap gap-8">
+                    <div>
+                        <h4 class="text-white font-medium mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                            <li><a href="#resume" class="text-gray-400 hover:text-white transition">Resume</a></li>
+                            <li><a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium mb-4">Resources</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#challenges" class="text-gray-400 hover:text-white transition">Lab Challenges</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">GitHub</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium mb-4">Contact</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition">Get in Touch</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">LinkedIn</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 Mburu Karanja. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="https://x.com/mburu_karanja_" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/mburukaranja" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Mburu-karanja" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hidden items-center justify-center">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Scroll progress bar animation
+        document.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            const pageHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercentage = (scrollPosition / pageHeight) * 100;
+            
+            // Change navbar style on scroll
+            const navbar = document.getElementById('navbar');
+            if (scrollPosition > 50) {
+                navbar.classList.add('shadow-lg');
+                navbar.classList.remove('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-lg');
+                navbar.classList.add('shadow-md');
+            }
+            
+            // Show/hide back to top button
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (scrollPosition > 300) {
+                backToTopBtn.classList.remove('hidden');
+                backToTopBtn.classList.add('flex');
+            } else {
+                backToTopBtn.classList.add('hidden');
+                backToTopBtn.classList.remove('flex');
+            }
+        });
+        
+        // Back to top functionality
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Animate progress bars when they come into view
+        const animateOnScroll = () => {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            
+            progressBars.forEach(bar => {
+                const barPosition = bar.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (barPosition < screenPosition) {
+                    // Animate only once
+                    if (!bar.dataset.animated) {
+                        bar.style.width = bar.style.width;
+                        bar.dataset.animated = 'true';
+                    }
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
 </body>
 </html>
